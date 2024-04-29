@@ -1,25 +1,21 @@
 package main
 
 import (
-	"os"
+	"flag"
+	"fmt"
 
-	"github.com/evandrolg/insta-motion/pkg/validator"
+	"github.com/evandrolg/insta-motion/pkg/arguments"
 )
 
 func main() {
-	args := os.Args
+	var imagePath, effect string
+	flag.StringVar(&imagePath, "image", "", "Path to the image")
+	flag.StringVar(&effect, "effect", "", "Effect to apply to the image")
+	flag.Parse()
 
-	if len(args) == 0 {
-		println("Image path is required")
-		os.Exit(1)
+	if err := arguments.CheckArguments(imagePath, effect); err != nil {
+		fmt.Errorf("Error: %v", err)
 	}
 
-	imagePath := args[1]
-
-	if !validator.ValidImage(imagePath) {
-		println("Image is not valid")
-		os.Exit(1)
-	}
-
-	println("Image is valid")
+	fmt.Println("Everything is ok")
 }
