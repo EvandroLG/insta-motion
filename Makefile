@@ -1,0 +1,4 @@
+.SILENT:
+
+test:
+	go test ./...
