@@ -5,17 +5,23 @@ import (
 	"fmt"
 
 	"github.com/evandrolg/insta-motion/pkg/arguments"
+	"github.com/evandrolg/insta-motion/pkg/converter"
 )
 
 func main() {
-	var imagePath, effect string
+	var imagePath string
 	flag.StringVar(&imagePath, "image", "", "Path to the image")
-	flag.StringVar(&effect, "effect", "", "Effect to apply to the image")
 	flag.Parse()
 
-	if err := arguments.CheckArguments(imagePath, effect); err != nil {
-		fmt.Errorf("Error: %v", err)
+	if err := arguments.CheckArguments(imagePath); err != nil {
+		fmt.Println(err)
 	}
 
-	fmt.Println("Everything is ok")
+	outputVideo, err := converter.ConvertToVideo(imagePath)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Printf("Video created: %s\n", outputVideo)
 }
