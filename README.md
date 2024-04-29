@@ -16,8 +16,8 @@ insta-motion --image your_image.jpeg
 
 This will generate a video output in the right resolution for sharing on your Story.
 
-<img src="./demo/example.jpeg" alt="Example" width="320">
-<video src="./demo/example.mov" width="320" height="240">
+<img src="./demo/example.jpeg" alt="Example" width="320" />
+<video src="./demo/example.mov" width="320" height="240" />
 
 ## License
 
