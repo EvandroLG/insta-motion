@@ -13,6 +13,7 @@ func ConvertToVideo(imagePath string, effect string) (string, error) {
 		"-i", imagePath,
 		"-vf", fmt.Sprintf("zoompan=z='%s':d=200, scale=1080:1920,setsar=1:1", getEffect(effect)),
 		"-c:a", "copy",
+		"loglevel", "error",
 		"-t", "15",
 		outputVideo,
 	}
