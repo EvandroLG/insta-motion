@@ -1,0 +1,30 @@
+{
+  "name": "insta-motion",
+  "version": "1.0.0",
+  "description": "A simple cli tool that provides an easy way to animate images for Instagram stories",
+  "bin": "./bin/cmd",
+  "scripts": {
+    "prepublishOnly": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvandroLG/insta-motion.git"
+  },
+  "keywords": [
+    "instagram",
+    "stories",
+    "photo",
+    "video",
+    "image",
+    "motion",
+    "animation",
+    "ffmpeg",
+    "cli"
+  ],
+  "author": "evandrolg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvandroLG/insta-motion/issues"
+  },
+  "homepage": "https://github.com/EvandroLG/insta-motion#readme"
+}
