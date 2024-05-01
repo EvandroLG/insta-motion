@@ -11,8 +11,10 @@ import (
 
 func main() {
 	var imagePath string
+	var effect string
 	var help bool
 	flag.StringVar(&imagePath, "image", "", "Path to the image")
+	flag.StringVar(&effect, "effect", "", "Effect to apply to the video")
 	flag.BoolVar(&help, "help", false, "Show help")
 	flag.Parse()
 
@@ -21,12 +23,12 @@ func main() {
 		os.Exit(0)
 	}
 
-	if err := arguments.CheckArguments(imagePath); err != nil {
+	if err := arguments.CheckArguments(imagePath, effect); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	outputVideo, err := converter.ConvertToVideo(imagePath)
+	outputVideo, err := converter.ConvertToVideo(imagePath, effect)
 
 	if err != nil {
 		fmt.Println(err)
