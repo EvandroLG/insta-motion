@@ -1,4 +1,4 @@
-# insta-motion
+# insta-motion &middot; [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
 `insta-motion` is a simple cli tool that provides an easy way to animate
  images for Instagram stories.
