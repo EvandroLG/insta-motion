@@ -14,8 +14,6 @@ func CheckArguments(imagePath string, effect string) error {
 		return fmt.Errorf("imagePath is empty")
 	}
 
-	fmt.Println(effect)
-
 	if effect != "" && !Effects[effect] {
 		return fmt.Errorf("effect is not valid")
 	}
