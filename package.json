@@ -1,6 +1,6 @@
 {
   "name": "insta-motion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple cli tool that provides an easy way to animate images for Instagram stories",
   "bin": "./bin/cmd",
   "scripts": {
