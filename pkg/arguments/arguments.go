@@ -9,6 +9,7 @@ var Effects = map[string]bool{
 	"zoom-out": true,
 }
 
+// CheckArguments validates the input arguments for the image and effect.
 func CheckArguments(imagePath string, effect string) error {
 	if imagePath == "" {
 		return fmt.Errorf("imagePath is empty")

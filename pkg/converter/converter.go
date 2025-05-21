@@ -6,6 +6,9 @@ import (
 	"os/exec"
 )
 
+// ConvertToVideo converts an image to a video with the specified effect.
+// The video is optimized for Instagram stories with a 9:16 aspect ratio.
+// The function uses ffmpeg to create a video from the image.
 func ConvertToVideo(imagePath string, effect string) (string, error) {
 	outputVideo := "output.mp4"
 
@@ -37,6 +40,8 @@ func ConvertToVideo(imagePath string, effect string) (string, error) {
 	return outputVideo, nil
 }
 
+// getEffect returns the ffmpeg zoompan filter expression based on the effect.
+// The effect can be "zoom-in" or "zoom-out".
 func getEffect(effect string) string {
 	switch effect {
 	case "zoom-out":
